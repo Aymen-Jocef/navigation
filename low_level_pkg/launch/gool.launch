@@ -1,0 +1,13 @@
+<launch>
+    <!-- Launch the obs.py node -->
+    <node name="observer_node" pkg="low_level_pkg" type="obs.py" output="screen" />
+
+    <!-- Launch the low_level.launch file -->
+    <include file="$(find low_level_pkg)/launch/low_level.launch" />
+
+    <!-- Launch the rplidar_a2m12.launch from rplidar_ros package -->
+    <include file="$(find rplidar_ros)/launch/rplidar_a2m12.launch" />
+
+    <!-- Launch the goal_pid_angle.py node -->
+    <node name="goal_pid_angle" pkg="low_level_pkg" type="goal_pid_angle.py" output="screen" />
+</launch>

@@ -1,0 +1,7 @@
+<launch>
+
+  <include file="$(find low_level_pkg)/launch/low_level.launch"/>
+  <include file="$(find rplidar_ros)/launch/rplidar_a2m12.launch"/>
+  <include file="$(find slam_pkg)/launch/gmapping.launch"/>
+  
+</launch>

@@ -1,0 +1,68 @@
+  GNU nano 4.8                                                                                 goal_pid_angle.py                                                                                 Modified  
+
+            rate.sleep()
+
+if __name__ == '__main__':
+    try:
+        controller = RobotController()
+        controller.move_to_goal(2, 2)
+    except rospy.ROSInterruptException:
+        pass
+
+Key Additions
+
+    PID Parameters:
+        For linear velocity: linear_kp, linear_ki, linear_kd.
+        For angular velocity: angular_kp, angular_ki, angular_kd.
+
+    PID Calculations:
+        Proportional (P): The current error.
+        Integral (I): Sum of past errors (scaled by time).
+        Derivative (D): Rate of change of the error (difference between current and last error).
+
+    Time Delta (delta_time):
+        Ensures that the integral and derivative calculations are time-sensitive.
+
+    Error Management:
+        Separate errors and computations for linear and angular velocities.
+
+Benefits of PID
+
+    The integral term helps correct steady-state errors.
+    The derivative term improves stability and prevents overshooting.
+
+You can tune the ki and kd 
+  GNU nano 4.8                                                                                 goal_pid_angle.py                                                                                 Modified  
+
+            rate.sleep()
+
+if __name__ == '__main__':
+    try:
+        controller = RobotController()
+        controller.move_to_goal(2, 2)
+    except rospy.ROSInterruptException:
+        pass
+
+Key Additions
+
+    PID Parameters:
+        For linear velocity: linear_kp, linear_ki, linear_kd.
+        For angular velocity: angular_kp, angular_ki, angular_kd.
+
+    PID Calculations:
+        Proportional (P): The current error.
+        Integral (I): Sum of past errors (scaled by time).
+        Derivative (D): Rate of change of the error (difference between current and last error).
+
+    Time Delta (delta_time):
+        Ensures that the integral and derivative calculations are time-sensitive.
+
+    Error Management:
+        Separate errors and computations for linear and angular velocities.
+
+Benefits of PID
+
+    The integral term helps correct steady-state errors.
+    The derivative term improves stability and prevents overshooting.
+
+You can tune the ki and kd 
